@@ -1,0 +1,16 @@
+program kadai_array
+!-----------------------------------------------  
+  implicit none
+  integer, parameter :: SP = kind(1.0)
+  integer, parameter :: DP = selected_real_kind(2*precision(1.0_SP))
+  integer :: i, j
+  real(SP), dimension(3,3) :: a
+!-----------------------------------------------  
+  do i=1,3
+     do j = 1,3
+        a(i,j) = real(10*i + j, SP)
+     end do
+     write(6,*) (a(i,j),j=1,3)
+  end do
+!-----------------------------------------------  
+end program kadai_array

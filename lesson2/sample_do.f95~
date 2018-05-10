@@ -1,0 +1,8 @@
+program sample_do
+  implicit none 
+  integer :: i
+  
+  do i = 1,10
+     write(6,*) i
+  end do
+end program sample_do

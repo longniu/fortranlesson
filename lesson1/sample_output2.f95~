@@ -1,0 +1,11 @@
+program sample_output2
+  implicit none
+  integer :: n1, n2
+!  open(10,file="input")
+  open(11,file="output")
+!  read(10,*) n1,n2
+!  write(6,*) n1,n2
+  write(11,*) n1, n2
+  close(10)
+!  close(11)
+end program sample_output2

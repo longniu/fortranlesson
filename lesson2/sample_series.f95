@@ -1,0 +1,18 @@
+program sample_series
+!-------------------------------------
+  implicit none
+  integer, parameter :: SP = kind(1.0)
+  integer, parameter :: DP = selected_real_kind(2*precision(1.0_SP))
+  integer, parameter :: nterms = 1000
+  real(SP), dimension(nterms) :: x,y,z
+  integer :: i
+!-------------------------------------
+  do i = 1, nterms
+     x(i) = 1.0/i
+     y(i) = 1.0/(i+1)
+     z(i) = 1.0/(1+2)
+  end do
+  
+  print *, 'ans = ', sum(x*y*z)
+!-------------------------------------
+end program sample_series
